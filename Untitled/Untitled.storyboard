@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TabBarScreen-1-TC">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--TabBarScreen 1-->
+        <scene sceneID="TabBarScreen-1-Tabbar-Scene">
+            <objects>
+                <tabBarController id="TabBarScreen-1-TC" sceneMemberID="viewController" userLabel="Tab Bar Controller" restorationIdentifier="TabBarScreen1" storyboardIdentifier="TabBarScreen1"  customClass="ANTabBarController" >
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="TabBarScreen-1-TabBar">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="overlayVCIdentifier" value="TabBarScreen1OverlayVC"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                        
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="hidesTabBar" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="screen-1-VC" kind="relationship" relationship="viewControllers" id="TabBarScreen-1-Tab-1"/>
+                        <segue destination="screen-2-VC" kind="relationship" relationship="viewControllers" id="TabBarScreen-1-Tab-2"/>
+                        <segue destination="screen-3-VC" kind="relationship" relationship="viewControllers" id="TabBarScreen-1-Tab-3"/>
+                    </connections>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TabBarScreen-1-TC-FR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0" y="0"/>
+        </scene>
+<!--TabBarScreen 1-->
+        <scene sceneID="TabBarScreen-1-Scene">
+            <objects>
+                <viewController restorationIdentifier="TabBarScreen1OverlayVC" storyboardIdentifier="TabBarScreen1OverlayVC" id="TabBarScreen-1-VC" userLabel="Tab Bar Overlay" sceneMemberID="viewController" customClass="APTabBarScreen1OverlayVC" customModuleProvider="target">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TabBarScreen-1-Top"/>
+                        <viewControllerLayoutGuide type="bottom" id="TabBarScreen-1-Bottom"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TabBarScreen-1" customClass="ANTabBarOverlayView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+        <subviews>
+    <mapView mapType="standard" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="map-1" userLabel="Map 1"  >
+        <rect key="frame" x="9" y="64" width="293" height="301"/>
+        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="string" keyPath="anAddress" value=""/>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <constraints>
+        </constraints>
+    </mapView>
+        </subviews>
+        <constraints>
+            <constraint firstItem="map-1" firstAttribute="width" constant="293" priority="971" id="map-1-width" userLabel="Map 1-width"/>
+            <constraint firstItem="map-1" firstAttribute="height" constant="301" priority="972" id="map-1-height" userLabel="Map 1-height"/>
+            <constraint secondAttribute="top" secondItem="TabBarScreen-1" firstItem="map-1" firstAttribute="top" constant="64" priority="973" id="map-1-top" userLabel="Map 1-top"/>
+            <constraint secondAttribute="left" secondItem="TabBarScreen-1" firstItem="map-1" firstAttribute="left" constant="9" priority="974" id="map-1-left" userLabel="Map 1-left"/>
+        </constraints>
+                                <connections>
+                                </connections>
+</view>
+                    <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="hidesNavBar" value="YES"/>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="hidesStatusBar" value="NO"/>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="lightStatusBar" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="map1" destination="map-1" id="map1-TabBarScreen-1-Prop"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TabBarScreen-1-FR" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="420" y="0"/>
+        </scene>
+    
+<!--home-->
+        <scene sceneID="screen-1-Scene">
+            <objects>
+                <viewController restorationIdentifier="home" storyboardIdentifier="home" id="screen-1-VC" userLabel="home" sceneMemberID="viewController" customClass="APHomeVC" customModuleProvider="target">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="screen-1-Top"/>
+                        <viewControllerLayoutGuide type="bottom" id="screen-1-Bottom"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="screen-1" >
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+        <constraints>
+        </constraints>
+                                <connections>
+                                </connections>
+</view>
+                    <tabBarItem key="tabBarItem" title="главная"   id="screen-1-Tab-Item"/>
+                    <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="hidesNavBar" value="YES"/>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="hidesStatusBar" value="NO"/>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="lightStatusBar" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="screen-1-FR" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0" y="743"/>
+        </scene>
+    
+<!--news-->
+        <scene sceneID="screen-2-Scene">
+            <objects>
+                <viewController restorationIdentifier="news" storyboardIdentifier="news" id="screen-2-VC" userLabel="news" sceneMemberID="viewController" customClass="APNewsVC" customModuleProvider="target">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="screen-2-Top"/>
+                        <viewControllerLayoutGuide type="bottom" id="screen-2-Bottom"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="screen-2" >
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+        <subviews>
+    <tableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Table-1" userLabel="News Table"   alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" pagingEnabled="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28">
+        <rect key="frame" x="0" y="19.36647" width="375.0979" height="647.2478"/>
+        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes></userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="screen-2-VC" id="Table-1-DataSource"/>
+                                    <outlet property="delegate" destination="screen-2-VC" id="Table-1-Delegate"/>
+                                </connections>
+        <color key="separatorColor" red="0.7843137" green="0.7803922" blue="0.8" alpha="1" colorSpace="calibratedRGB"/>
+        <inset key="separatorInset" minX="90" minY="0.0" maxX="0.0" maxY="0.0"/>
+        <constraints>
+        </constraints>
+        <prototypes>
+                     <tableViewCell rowHeight="80" id="Cell-1-Cell" userLabel="Article Cell" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell8" clipsSubviews="YES" contentMode="scaleToFill" customClass="APCell8" customModuleProvider="target">
+                        <rect key="frame" x="0" y="0" width="375.0979" height="80"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0" colorSpace="calibratedRGB"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cell-1" userLabel="Cell ContentView"   tableViewCell="Cell-1-Cell">
+        <rect key="frame" x="0" y="0" width="375.0979" height="80"/>
+        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes></userDefinedRuntimeAttributes>
+                            <autoresizingMask key="autoresizingMask"/>
+        <subviews>
+    <imageView image="" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="image-2" userLabel="Image"   >
+        <rect key="frame" x="0" y="0" width="80" height="80"/>
+        <color key="backgroundColor" red="0.837418" green="0.8374378" blue="0.8374271" alpha="1" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes></userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <constraints>
+        </constraints>
+    </imageView>
+    <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Label-1" userLabel="Label"   textAlignment="left" lineBreakMode="wordWrap" numberOfLines="2" horizontalHuggingPriority="251" verticalHuggingPriority="251" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" >
+        <string key="text">Square beats its fourth-quarter revenue expectations</string>
+        <rect key="frame" x="90" y="5" width="279" height="50"/>
+        <color key="backgroundColor" red="0.8823529" green="0.8431373" blue="0.6862745" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="number" keyPath="letterSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="paragraphSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <fontDescription key="fontDescription" pointSize="13" type="system" />
+        <color key="textColor" red="0.1294118" green="0.1294118" blue="0.1294118" alpha="1" colorSpace="calibratedRGB"/>
+        <nil key="highlightedColor"/>
+        <constraints>
+        </constraints>
+    </label>
+    <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Label-2" userLabel="Label"   textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" horizontalHuggingPriority="251" verticalHuggingPriority="251" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" >
+        <string key="text"></string>
+        <rect key="frame" x="224" y="54" width="146" height="26"/>
+        <color key="backgroundColor" red="0.9215686" green="0.7254902" blue="0.9215686" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="number" keyPath="letterSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="paragraphSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <fontDescription key="fontDescription" pointSize="12" type="system" />
+        <color key="textColor" red="0.3686275" green="0.3686275" blue="0.3686275" alpha="1" colorSpace="calibratedRGB"/>
+        <nil key="highlightedColor"/>
+        <constraints>
+        </constraints>
+    </label>
+    <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Label-3" userLabel="Label: 2016-03-09 15:07:49 +0000"   textAlignment="left" lineBreakMode="wordWrap" numberOfLines="1" horizontalHuggingPriority="251" verticalHuggingPriority="251" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" >
+        <string key="text">2016-03-09 15:07:49 +0000</string>
+        <rect key="frame" x="90" y="53" width="146" height="26"/>
+        <color key="backgroundColor" red="0.9215686" green="0.7254902" blue="0.9215686" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="number" keyPath="letterSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="paragraphSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <fontDescription key="fontDescription" pointSize="12" type="system" />
+        <color key="textColor" red="0.3686275" green="0.3686275" blue="0.3686275" alpha="1" colorSpace="calibratedRGB"/>
+        <nil key="highlightedColor"/>
+        <constraints>
+        </constraints>
+    </label>
+        </subviews>
+        <constraints>
+            <constraint  firstItem="image-2" firstAttribute="width" constant="80" priority="980" id="image-2-width" userLabel="Image-width"/>
+            <constraint multiplier="1" secondAttribute="top" secondItem="Cell-1" firstItem="image-2" firstAttribute="top" constant="0" priority="982" id="image-2-top" userLabel="Image-top"/>
+            <constraint multiplier="1.0" secondAttribute="bottom" secondItem="Cell-1" firstItem="image-2" firstAttribute="bottom" constant="0" priority="983" id="image-2-bottom" userLabel="Image-bottom"/>
+            <constraint multiplier="1" secondAttribute="left" secondItem="Cell-1" firstItem="image-2" firstAttribute="left" constant="0" priority="984" id="image-2-left" userLabel="Image-left"/>
+            <constraint multiplier="1" secondAttribute="top" secondItem="Cell-1" firstItem="Label-1" firstAttribute="top" constant="5" priority="982" id="Label-1-top" userLabel="Label-top"/>
+            <constraint multiplier="1" secondAttribute="left" secondItem="Cell-1" firstItem="Label-1" firstAttribute="left" constant="90" priority="984" id="Label-1-left" userLabel="Label-left"/>
+            <constraint multiplier="2.0" secondAttribute="centerX" secondItem="Cell-1" firstItem="Label-1" firstAttribute="right" constant="-6" priority="985" id="Label-1-right" userLabel="Label-right"/>
+            <constraint firstItem="Label-1" firstAttribute="height" constant="50" priority="972" id="Label-1-height" userLabel="Label-height"/>
+            <constraint multiplier="1.0" secondAttribute="bottom" secondItem="Cell-1" firstItem="Label-2" firstAttribute="bottom" constant="0" priority="983" id="Label-2-bottom" userLabel="Label-bottom"/>
+            <constraint multiplier="2.0" secondAttribute="centerX" secondItem="Cell-1" firstItem="Label-2" firstAttribute="right" constant="-5" priority="985" id="Label-2-right" userLabel="Label-right"/>
+            <constraint firstItem="Label-2" firstAttribute="width" constant="146" priority="971" id="Label-2-width" userLabel="Label-width"/>
+            <constraint firstItem="Label-2" firstAttribute="height" constant="26" priority="972" id="Label-2-height" userLabel="Label-height"/>
+            <constraint firstItem="Label-3" firstAttribute="width" constant="146" priority="971" id="Label-3-width" userLabel="Label: 2016-03-09 15:07:49 +0000-width"/>
+            <constraint firstItem="Label-3" firstAttribute="height" constant="26" priority="972" id="Label-3-height" userLabel="Label: 2016-03-09 15:07:49 +0000-height"/>
+            <constraint secondAttribute="top" secondItem="Cell-1" firstItem="Label-3" firstAttribute="top" constant="53" priority="973" id="Label-3-top" userLabel="Label: 2016-03-09 15:07:49 +0000-top"/>
+            <constraint secondAttribute="left" secondItem="Cell-1" firstItem="Label-3" firstAttribute="left" constant="90" priority="974" id="Label-3-left" userLabel="Label: 2016-03-09 15:07:49 +0000-left"/>
+        </constraints>
+                        </tableViewCellContentView>
+                        <constraints>
+                            <constraint firstItem="Cell-1" firstAttribute="left" secondItem="Cell-1-Cell" secondAttribute="left" id="Cell-1-ContentView-left" userLabel="ContentView-Left"/>
+                            <constraint firstItem="Cell-1" firstAttribute="top" secondItem="Cell-1-Cell" secondAttribute="top" id="Cell-1-ContentView-top" userLabel="ContentView-Top"/>
+                            <constraint firstAttribute="bottom" secondItem="Cell-1" secondAttribute="bottom" id="Cell-1-ContentView-bottom" userLabel="ContentView-Bottom"/>
+                            <constraint firstAttribute="right" secondItem="Cell-1" secondAttribute="right" id="Cell-1-ContentView-right" userLabel="ContentView-Right"/>
+                        </constraints>
+                                <connections>
+                                    <outlet property="image12" destination="image-2" id="image12-Cell-1-Prop"/>
+        
+                                    <outlet property="label14" destination="Label-1" id="label14-Cell-1-Prop"/>
+        
+                                    <outlet property="label15" destination="Label-2" id="label15-Cell-1-Prop"/>
+        
+                                    <outlet property="label17" destination="Label-3" id="label17-Cell-1-Prop"/>
+        
+                                </connections>
+</tableViewCell>
+        </prototypes>
+    </tableView>
+        </subviews>
+        <constraints>
+            <constraint multiplier="1" secondAttribute="top" secondItem="screen-2" firstItem="Table-1" firstAttribute="top" constant="20" priority="982" id="Table-1-top" userLabel="News Table-top"/>
+            <constraint multiplier="1.0" secondAttribute="bottom" secondItem="screen-2" firstItem="Table-1" firstAttribute="bottom" constant="0" priority="983" id="Table-1-bottom" userLabel="News Table-bottom"/>
+            <constraint multiplier="1" secondAttribute="left" secondItem="screen-2" firstItem="Table-1" firstAttribute="left" constant="0" priority="984" id="Table-1-left" userLabel="News Table-left"/>
+            <constraint multiplier="2.0" secondAttribute="centerX" secondItem="screen-2" firstItem="Table-1" firstAttribute="right" constant="0" priority="985" id="Table-1-right" userLabel="News Table-right"/>
+        </constraints>
+                                <connections>
+                                </connections>
+</view>
+                    <tabBarItem key="tabBarItem" title="новости"   id="screen-2-Tab-Item"/>
+                    <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="hidesNavBar" value="YES"/>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="hidesStatusBar" value="NO"/>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="lightStatusBar" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="aNewstablesmall" destination="Table-1" id="aNewstablesmall-screen-2-Prop"/>
+
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="screen-2-FR" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="475" y="743"/>
+        </scene>
+    
+<!--feedback-->
+        <scene sceneID="screen-3-Scene">
+            <objects>
+                <viewController restorationIdentifier="feedback" storyboardIdentifier="feedback" id="screen-3-VC" userLabel="feedback" sceneMemberID="viewController" customClass="APFeedbackVC" customModuleProvider="target">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="screen-3-Top"/>
+                        <viewControllerLayoutGuide type="bottom" id="screen-3-Bottom"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="screen-3" >
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+        <constraints>
+        </constraints>
+                                <connections>
+                                </connections>
+</view>
+                    <tabBarItem key="tabBarItem" title="обратная связь"   id="screen-3-Tab-Item"/>
+                    <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="hidesNavBar" value="YES"/>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="hidesStatusBar" value="NO"/>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="lightStatusBar" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="screen-3-FR" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="950" y="743"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="" />
+    </resources>
+</document>
